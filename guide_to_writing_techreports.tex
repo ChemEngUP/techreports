@@ -1729,9 +1729,29 @@ It will be kept up to date automatically.
 \end{figure}
 
 \subsection{Special characters}
-Chemical equilibrium is indicated by the $\rightleftharpoons$
-character.  This is available as Unicode character U021CC
-(rightleftharpoons).
+There are a number of special characters which are commonly mistyped or incorrectly entered.
+Never resort to using a different font like Symbol to enter your special symbols.
+Rather use the Unicode code point for the character you are looking for.
+Table~\ref{tab:specialchar} shows a number of common symbols.
+On MS Windows, these characters can be entered by holding the Alt key and then entering the code point including the leading zero.
+For example, to enter the multiplication sign, press and hold Alt while entering 00D7, then let go of the Alt key.
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{lcll}
+    \toprule
+    Name                                                                                                  & Symbol               & Code point & Name                \\ 
+    \midrule
+    Degree                                                                                                & \SI{}{\degree}       & U+00B0     & degree sign         \\ 
+    Multiplication                                                                                        & $\times$             & U+00D7     & multiplication sign \\
+    Chemical equilibrium                                                                                  & $\rightleftharpoons$ & U+021CC    & rightleftharpoons   \\
+    \AA ngstr\"om                                                                                         & \SI{}{\angstrom}     & U+212B     & angstrom sign       \\
+    Multiplication dot                                                                                    & $\cdot$              & U+22C5     & dot operator        \\
+    \bottomrule
+  \end{tabular}
+  \caption{Unicode code points for commonly used special characters}
+  \label{tab:specialchar}
+\end{table}
+%TODO: consider all the stuff in this table https://publications.csiro.au/rpr/download?pid=csiro:EP115755 & dsid=DS4
 
 \subsection{Formatting}
 \label{sec:tips-formatting}
