@@ -85,7 +85,7 @@
     \vfil
     Guidelines for Writing \\ Technical Reports and Papers\\}
   \vfil
-  2015 \\
+  2015/2016 \\
   \vfil
   \begin{flushright}\small{compiled on \today}\end{flushright}
 \end{centering}
@@ -118,7 +118,10 @@ interested in the most important results and recommendations.
 Somebody paging through a technical journal needs to establish quickly
 whether a paper is important.  Once this has been determined, the
 reader may be interested in checking the information in the finest
-detail: What was done?  How was it done?  What was it done with?
+detail: 
+What was done?  
+How was it done?  
+With what was it done?
 
 The most important problems experienced by technical writers are
 concerned with the structure (format) of their writing and with
@@ -148,7 +151,7 @@ recommendations and a reference section.  If necessary, and only if
 necessary, appendices are added.
 
 Typical basic outlines for reports and papers are shown in
-Tables~\ref{tab:reportformat} and \ref{tab:paperformat} respectively.
+Table~\ref{tab:reportformat} and Table~\ref{tab:paperformat}.
 For details of actual requirements, refer to
 Chapter~\ref{cha:structure} of this guide.  
 
@@ -233,8 +236,7 @@ size that will be accepted.  Garamond 14, CG Times 13 and Courier New
 font size of the type of font in which you prefer to work with these
 guidelines, keeping in mind that different fonts may appear
 differently sized even when they have the same point size selected in
-a word processor -- refer to appendix~A1.3 of
-\citet{bruckmanmandersloot}, especially the table on page 186.
+a word processor.
 
 As an example, consider the following two lines where fonts are
 compared with the same
@@ -401,8 +403,8 @@ Figures are included in the text with no border, and a suitable center-justified
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}
-    \begin{axis}[xlabel=Time / s, 
-                 ylabel=Height / m, 
+    \begin{axis}[xlabel=Time (s), 
+                 ylabel=Height (m), 
                  ylabel style={rotate=-90, anchor=east},
                  domain=0:10,
                  ymin=0,ymax=110,
@@ -456,7 +458,7 @@ Don't
 \end{itemize}
 
 \subsection{Tables}
-Avoid vertical lines in tables as much as possible (even on the sides
+Avoid lines in tables as much as possible (even on the sides
 of tables -- tables are not ``boxed in'').  The vertical
 lines of figures should be enough to guide the eye vertically.  A
 slightly thicker line should be used at the top and bottom of the
@@ -491,20 +493,21 @@ If more space is required than a single page, it is usually a sign that the mate
 
 \subsection{Cross-referencing}
 When referring to items in the same text, use capitals and the
-correct number as in the following example:
+correct number as in the following example. 
+Never state the number separately from the item name. 
+Use ``Figure 1 and Figure 2'' instead of ``Figures 1 and 2''.
 
 \begin{quote}
-  As can be seen from Figures 1, 2 and 4, there is a strong
-  correlation between heat transfer and Reynolds number.  Equation 2
-  shows the proposed model, while Equation 3 has an alternate
+  As can be seen from Figure~1, Figure~2 and Figure~4, there is a strong
+  correlation between heat transfer and Reynolds number.  Equation~2
+  shows the proposed model, while Equation~3 has an alternate
   formulation proposed by Smee (1992).  The experimental results are
-  summarised in Table 3.  Section 4 discusses these results in more
-  detail, while Section 5 proposes novel research directions.
+  summarised in Table~3.  Section~4 discusses these results in more
+  detail, while Section~5 proposes novel research directions.
 \end{quote}
 
-Place figures and tables near their first reference (but definitely
-after the first reference).  \emph{Each and every sketch, figure and
-  table must be referred to in the text.}
+Place figures and tables as close as possible to their first reference (but definitely after the first reference).  
+\emph{Each and every sketch, figure and  table must be referred to in the text.}
 
 \subsection{Abbreviations}
 \label{sec:abbreviations}
@@ -572,7 +575,7 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
         \vfill
         \textbf{Title of Report} \\
         \vfill
-        {\small A Student} \\
+        {\small Student, A} \\
       \end{centering}
       \vfill
       \begin{flushright}
@@ -586,7 +589,7 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
         \textbf{Title of Report} \\
         \vfill
         {\small 
-        A Student \\
+        Student, A \\
         20232329 \\
         Department of Chemical Engineering \\
         University of Pretoria }\\
@@ -681,7 +684,7 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
     \begin{demopage}
       \textbf{5. Discussion}\\
       {\small \begin{raggedright} Explain the observed correlations
-          between variables (see~\ref{sec:discussion})
+          between variables (see~\ref{sec:discussion}). Usually combined with results.
           \\ \end{raggedright}} \vfill
       \begin{centering}5\\ \end{centering}
     \end{demopage}
@@ -756,7 +759,7 @@ symbols used are defined and the units are given.  Greek
 characters, subscripts and superscripts are tabulated separately.
 This list is generally only required if several equations are employed
 in the text.  The nomenclature list does not include abbreviations,
-acronyms etc.
+acronyms, chemical formulae, etc.
 
 The pages on which the editorial information (synopsis, \dots nomenclature) appears are numbered with small roman numerals (i, ii, \dots).
 These pages are also indicated in the table of contents.  The
@@ -774,7 +777,7 @@ that will be found in a paper.  Refer to Table~\ref{tab:paperformat}.
         \vfill
         \textbf{TITLE OF ARTICLE} \\
         \vfill
-        {\small A Student, B Student \\ Department of Chemical
+        {\small Student, A and Lecturer, B \\ Department of Chemical
           Engineering \\ University of Pretoria \\
         \vfill
         \begin{centering} {\small SYNOPSIS} \\ \end{centering}
@@ -832,12 +835,12 @@ following:
 Nothing else appears on the title page.  The information on the title
 page is arranged to form a balanced layout, \emph{limited to one page only}.
 
-The pages are numbered from the title page using ordinary (Arabic)
-numerals.  The title page is usually not numbered, so the second page
-is number 2.  If a nomenclature list is used, this appears at the top
-of page two, followed directly by the introduction.  If the headings
-are numbered, number 1 is assigned to
-the \subsectionname{Introduction}.  
+The page numbers are counted from the title page using ordinary (Arabic) numerals.  
+The title page number is usually not shown. 
+The second page therefore is the first numbered page. 
+It will show the number 2.  
+If a nomenclature list is used, this appears at the top of page two, followed directly by the introduction.
+If the headings are numbered, number 1 is assigned to the \subsectionname{Introduction}.  
 
 The remaining sections proceed as for a report.  The theory section of
 an article is usually more brief than in a report, as the readership
@@ -888,15 +891,13 @@ The following usually appear in the introduction (but not as seperate sub-headin
 
 In principle, only enough background should be given to enable the
 reader to understand the problem statement.  The problem should be
-stated in such a way that the objective can be understood.  It is
-sometimes wise to combine the problem and objective statement if the
-objective is simply to solve the problem.
+stated in such a way that the objective can be understood.
+It is always wise to state the objective statement in more detail than simply to solve the problem.
 
 In general, the problem statement outlines the justification for the
-investigation.  For example: ``The problem is a shortage of potassium
-for the manufacture of explosives; the purpose of the investigation
-was to determine the feasibility of a filtration technique to purify a
-locally available raw material containing potassium.''
+investigation.  For example: 
+``The problem is a shortage of potassium for the manufacture of fertilsers.'' 
+The purpose of the investigation could then be to determine the feasibility of a filtration technique to purify a locally available raw material containing potassium.
 
 The method and scope are mentioned only.  For that no
 more than a few sentences will be required.  Further details can be
@@ -947,11 +948,12 @@ repeat the experimental work.
 
 \paragraph{Apparatus} 
 Describe the apparatus used.  Use sketches and give dimensions if
-necessary.  Give equipment type and model number if very specialised
+necessary.  Give equipment type and model number only if very specialised
 equipment is used.  Do not present the apparatus as a ``shopping
-list'', use full sentences.
+list'', use full sentences. Only if necessary will the suppliers of chemicals, etc, be mentioned.
 
 \paragraph{Planning}
+This is the experimental design .
 Name the independent variables and justify the choice.  Justify the
 range of values investigated for the independent variables used.  Show
 and justify the choice of dependent (or measured) variables.  Show the
@@ -970,9 +972,10 @@ chemical analysis.
 \subsubsection{Papers}
 The experimental section in a paper is as brief as possible, but it
 must still be informative.  In many cases the three sections
-(Apparatus, Planning and Methods) will be combined.  Less detail will
-be given and referencing will be generous -- but try not to reference
-the full report on which the paper is based.
+(Apparatus, Planning and Methods) will be combined.  
+Less detail will be given and referencing will be generous.
+
+\textbf{Try not to reference the full report on which the paper is based}.
 
 \subsection{Results}
 \label{sec:results}
@@ -1012,6 +1015,7 @@ The discussion and interpretation of your results will lead to
 conclusions being drawn.  These conclusions should not merely be a
 summary of results or observations, but rather show how these results
 have been interpreted to form a new statement.
+All conclusions must be based on results.
 
 From the viewpoint of the project leader's evaluation, this is a very
 important chapter.  It gives an indication of the author's insight
@@ -1026,9 +1030,10 @@ to bad logic or loss of argument.  No new material, information or
 conclusions may be introduced at this point.
 
 All the objectives of the investigation, as stated in the
-\subsectionname{Introduction}, must be addressed here.  All conclusions
-mentioned here, must have been discussed beforehand.  All conclusions
-must be based on results.
+\subsectionname{Introduction}, must be addressed here.  
+If this is not possible, the \subsectionname{Introduction} must be revised.
+All conclusions mentioned here, must have been discussed beforehand.  
+All conclusions must be based on results.
 
 \subsection{Recommendations}
 \label{sec:recommendations}
@@ -1036,10 +1041,7 @@ must be based on results.
 Findings may lead to actions which should be considered.  The
 recommended actions are summarised as recommendations.  All
 recommendations must be justified or justifiable from the conclusions.
-Do not include the word recommendations in the heading if there are no
-recommendations to be made.  If the scope of the recommendations does
-not justify it, the recommendations can be combined with the
-conclusions in one chapter.
+The recommendations are frequently be combined with the conclusions in one chapter.
 
 \subsection{References}
 \label{sec:references}
@@ -1107,7 +1109,7 @@ will arrange them to form a logical overview of the project.  To
 achieve this it is usually necessary to exclude raw data, cumbersome
 calculations, supporting results (for example standardising of
 equipment) and documentary material (for example graphs used in
-calculations and computer programmes) from the main body of the
+calculations and computer programs) from the main body of the
 report.  Such material is then put in appendices as appropriate
 paragraphs and subparagraphs.
 
@@ -1172,18 +1174,17 @@ written in this sequence.
 The \subsectionname{Introduction} is written first.  Give the background,
 problem statement, purpose of the investigation and scope of the
 investigation (See~Section~\ref{sec:introduction}).  After that the
-\subsectionname{Main body} of the report (See~Sections~\ref{sec:literature} to
-\ref{sec:discussion} and the \subsectionname{Appendices} (See
+\subsectionname{Main body} of the report (See~Section~\ref{sec:literature} to
+Section~\ref{sec:discussion} and the \subsectionname{Appendices} (See
 section~\ref{sec:appendices}) are completed.
 
 The next important chapter is the \subsectionname{Conclusions and
-  recommendations}.  (See~Sections~\ref{sec:conclusions} and
-\ref{sec:recommendations}).  The conclusions are already justified in
-the main body of the report.  Everything that is stated in the
-\subsectionname{Introduction} as an aim/purpose must be addressed in the
-conclusions.  It is totally unacceptable to make unsubstantiated
-statements in this section.  It is usually necessary to revise, refine
-or even rewrite the \subsectionname{Introduction} at this point.
+  recommendations}.  (See~Section~\ref{sec:conclusions} and
+Section~\ref{sec:recommendations}).  
+The conclusions are already drawn and justified in the main body of the report.
+Everything that is stated in the \subsectionname{Introduction} as an aim/purpose must be addressed in the conclusions.
+It is totally unacceptable to make unsubstantiated statements in this section.
+It is usually necessary to revise, refine or even rewrite the \subsectionname{Introduction} at this point.
 
 Now that the scope of the report is fixed and the conclusions are
 properly formulated, the \subsectionname{Synopsis} is written.  (See
@@ -1234,7 +1235,7 @@ A good author will wait a few days after writing the report before
 doing this exercise.
 
 Read the \strongemph{introduction} first.  Does it place the
-investigation in context, that is does it give background, problem
+investigation in context? Does it give background, problem
 statement, purpose/aim, limitations and scope of the investigation?
 See~Section~\ref{sec:introduction}.  Now read the
 \strongemph{conclusions}.  Do the conclusions link directly with the
@@ -1245,7 +1246,7 @@ Section~\ref{sec:conclusions}.
 
 The reader should now have a good idea of the success of the
 investigation.  Page through the report and look at the
-\strongemph{headings}.  Is the hierarchy of headings correct, that is do
+\strongemph{headings}.  Is the hierarchy of headings correct?  Do
 the numbers or letter type indicate the importance of the heading?  Is
 it clear that all the important aspects are included?  See
 Section~\ref{sec:hierarchy-headings}.
@@ -1262,7 +1263,7 @@ After text analysis one may find that:
 \item there are results in the introduction
 \item discussion is included in the part of the report that deals with
   experimental work
-\item new experimental details are included in the discussion
+\item new experimental details are included in the results and discussion
 \item discussion is included in the section that contains conclusions
 \item some of the conclusions are not based on results
 \item some of the recommendations do not flow from conclusions
@@ -1288,9 +1289,10 @@ conclusions?
 The reader should now be well acquainted with the investigation and
 can analyse the \strongemph{synopsis} and the \strongemph{title}.  Are
 the main findings, main recommendations and (if necessary) the purpose
-and scope of the investigation clear from the synopsis?  Do the title
-and synopsis form a unit?  Is the title short and informative?  See
-Sections~\ref{sec:title} and~\ref{sec:synopsis-keywords}.
+and scope of the investigation clear from the synopsis?  
+Does the synopsis have impact?
+Do the title and synopsis form a unit?  Is the title short and informative?  See
+Section~\ref{sec:title} and Section~\ref{sec:synopsis-keywords}.
 
 Is the report prepared with the necessary editorial care?  Note
 neatness, balanced page layout, care of language, spelling errors,
@@ -1443,7 +1445,7 @@ the options are indicated here as examples.
 Note that these groupings (Book, Paper, etc) should not appear in the reference list.
 
 \paragraph{Book}
-The book's title is in \emph{italics}.
+The title of the book is in \emph{italics}.
 
 Kesting, RE (1972) \textit{Synthetic Polymeric Membranes},
   McGraw-Hill, New York.
@@ -1452,7 +1454,7 @@ Winkler, T, Botha, J, Kan, P and Rhodes, K (2006)
   \textit{Infinite Problems}, Wise Publications, Bloemfontein.
 
 \paragraph{Paper published in a journal}
-The paper's title is in ``quotes'', while the journal name is in \emph{italics}.
+The title of the paper is in ``quotes'', while the journal name is in \emph{italics}.
 
 Strathmann, H (1981) ``Membrane separation processes''
   \textit{J.  Membr.  Sci.}, 9 (2), 121 -- 189.
