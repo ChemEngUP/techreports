@@ -3,74 +3,7 @@
 % Converted to LaTeX by Carl Sandrock
 % Mail bug reports to carl.sandrock@rockconsulting.co.za
 
-% Use ISO date format
-\usepackage[english, iso]{isodate}
-
-% Make everything look a little better
-\usepackage{microtype}
-
-% Author, year refrencing
-\usepackage{natbib}
-
-\usepackage{fancybox}
-\usepackage{boxedminipage}
-
-\usepackage{setspace}
-\onehalfspacing
-
-\usepackage{color}
-
-% Proper table lines
-\usepackage{booktabs}
-% More space above tables for caption
-\setlength{\abovetopsep}{1em}
-
-% Change page size
-\usepackage[inner=0.4in, outer=0.3in, twoside, tmargin=0.3in, bmargin=0.5in]{geometry}
-
-% Change caption formatting
-\usepackage[hang]{caption}
-
-% Unit typesetting
-\usepackage[locale=ZA]{siunitx}
-
-% plotting
-\usepackage{pgfplots}
-
-% import graphics
-\usepackage{graphicx}
-  \DeclareGraphicsExtensions{.jpg, .pdf, .mps, .png}
-  \graphicspath{{graph/}}
-
-% Put bibliography in table of contents, and change name to "References"
-\usepackage[nottoc,numbib]{tocbibind}
-\settocbibname{References}
-
-% Change punctuation for references
-\bibpunct[: ]{(}{)}{;}{a}{,}{,}
-
-% Change fonts?
-%\usepackage{helvet} % helvetica "arial"
-% \usepackage{mathptmx} % Times new roman
-% \usepackage{utopia} % Utopia
-
-% AIEEE: screw up spacing to make Grimsehl happy
-\setlength{\parindent}{0in}
-\setlength{\parskip}{2.5ex plus 3pt minus 2pt}
-
-% Proper links
-\usepackage{hyperref}
-
-% Special stypes for sections and emphasis
-\newcommand{\subsectionname}[1]{\emph{#1}}
-\newcommand{\strongemph}[1]{\textbf{#1}}
-
-% Commands for typesetting the demo pages
-\newlength{\demopageheight}
-\newlength{\demopagewidth}
-\setlength{\demopageheight}{12em}
-\setlength{\demopagewidth}{0.32\linewidth}
-\newenvironment{demopage}{\begin{minipage}[s][\demopageheight]{\demopagewidth}}{\end{minipage}}
+\input{preamble}
 
 \begin{document}
 \begin{titlepage}
@@ -83,7 +16,7 @@
     {\Huge\scshape
     Department of Chemical~Engineering\\
     \vfil
-    Guidelines for Writing \\ Technical Reports and Papers\\}
+    Guidelines and Rules for Writing Technical Reports and Papers\\}
   \vfil
   2015/2016 \\
   \vfil
@@ -134,8 +67,8 @@ guidelines are formal requirements of the Department of Chemical
 Engineering for all reports, from practical training reports to PhD
 theses.  For detailed information about postgraduate studies,
 please refer to~\citet{buys}, which is available on-line from
-\url{http://www.ais.up.ac.za/ebit/guides/research_guide.pdf}.  Note
-that the department's style guidelines still apply.
+\url{http://www.ais.up.ac.za/ebit/guides/ResearchGuidePostGradStudents.pdf}.
+Note that the department's style guidelines still apply.
 
 The writer should make use of good judgement to link the style and
 structure prescribed by this guide to areas not covered by the guide.
@@ -146,87 +79,78 @@ when not directly prescribed.
 \label{cha:format}
 Papers and reports typically consist of editorial information, the
 introduction, the body of the report, (under headings such as theory,
-literature, experimental, results and discussion) conclusions,
-recommendations and a reference section.  If necessary, and only if
-necessary, appendices are added.
+literature, experimental, results and discussion, conclusions and recommendations, and a reference section).
+If necessary, and only if necessary, appendices are added.
 
 Typical basic outlines for reports and papers are shown in
-Table~\ref{tab:reportformat} and Table~\ref{tab:paperformat}.
+Table~\ref{tab:format}.
 For details of actual requirements, refer to
 Chapter~\ref{cha:structure} of this guide.  
-
-\begin{table}[htbp]
-\begin{centering}
-\caption[Format for reports]{Format for reports}
-\label{tab:reportformat}
-
-\begin{boxedminipage}[t]{0.8\textwidth}
-  \begin{spacing}{1.8}
-    \begin{tabbing}
-      xxx \= xxx \= ssdfg \kill
-      Editorial Information                                    \\
-          \> Cover                                             \\
-          \> Title page                                        \\
-          \> Synopsis \& keywords (Title repeated)             \\
-          \> Acknowledgements                                  \\
-          \> Contents                                          \\
-          \> Nomenclature list                                 \\
-      1.  \> Introduction                                      \\
-      2.  \> Literature (Theory)                               \\
-      3.  \> Experimental                                      \\
-      3.1 \> Apparatus                                         \\
-      3.2 \> Planning (Experimental Design)                    \\
-      3.3 \> Methods                                           \\
-      4.  \> Results  (or Results and Discussion)              \\
-      5.  \> Discussion                                        \\
-      6.  \> Conclusions  (or Conclusions and Recommendations) \\
-      7.  \> Recommendations                                   \\
-      8.  \> References                                        \\
-      9.  \> Appendices
-    \end{tabbing}
-  \end{spacing}
-\end{boxedminipage}                                            \\
-\end{centering}
-In a major report it is customary to start every section (Results,
-Recommendations, etc) on a new page, except if the sections are less than one page long.\bigskip
 
 Note that it is not always possible to follow the prescribed format for reports and papers (for instance, there may be no specific apparatus).  
 At such times one must invent one's own main and sub-headings to suit the work done.  
 The hierarchy of headings and flow of argument then becomes very important.
-\end{table}
 
 \begin{table}[htbp]
-\centering
-\caption{Format for papers}
-\label{tab:paperformat}
-
-\begin{boxedminipage}[t]{0.7\textwidth}
+\begin{centering}
+\caption{Format for reports and papers}
+\label{tab:format}
+\begin{boxedminipage}[t]{0.4\textwidth}
+  \begin{centering}Reports\\\end{centering}
   \begin{spacing}{1.8}
     \begin{tabbing}
       xxx \= xxx \= ssdfg \kill
-      Editorial Information                                    \\
-          \> Title                                             \\
-          \> Author                                            \\         
-          \> Synopsis \& keywords                              \\
-          \> Nomenclature list                                 \\
-      1.  \> Introduction                                      \\
-      2.  \> Theory  (Literature)                              \\
-      3.  \> Experimental                                      \\
-      4.  \> Results  (or Results and Discussion)              \\
-      5.  \> Discussion                                        \\
-      6.  \> Conclusions  (or Conclusions and Recommendations) \\
-      7.  \> Recommendations                                   \\
-      8.  \> Acknowledgements  (if any)                        \\
-      9.  \> References                                        \\
-      10. \> Appendices  (not likely)
+      Editorial Information                        \\
+          \> Cover                                 \\
+          \> Title page                            \\
+          \> Title, Synopsis \& keywords \\
+          \> Acknowledgements                      \\
+          \> Contents                              \\
+          \> Nomenclature list                     \\
+      1.  \> Introduction                          \\
+      2.  \> Literature (Theory)                   \\
+      3.  \> Experimental                          \\
+      3.1 \> Apparatus                             \\
+      3.2 \> Planning (Experimental Design)        \\
+      3.3 \> Methods                               \\
+      4.  \> Results and Discussion                \\
+      5.  \> Conclusions and Recommendations       \\
+      6.  \> References                            \\
+      A.  \> Appendix A                            \\
+      B.  \> Appendix B                            
     \end{tabbing}
   \end{spacing}
 \end{boxedminipage}
+\begin{boxedminipage}[t]{0.4\textwidth}
+ \begin{spacing}{1.8}
+  \begin{centering}Papers\\\end{centering}
+    \begin{tabbing}
+      xxx \= xxx \= ssdfg \kill
+      Editorial Information                  \\
+          \> Title                           \\
+          \> Author                          \\         
+          \> Synopsis \& keywords            \\
+          \> Nomenclature list               \\
+      1.  \> Introduction                    \\
+      2.  \> Theory  (Literature)            \\
+      3.  \> Experimental                    \\
+      4.  \> Results and Discussion          \\
+      5.  \> Conclusions and Recommendations \\
+      6.  \> Acknowledgements  (if any)      \\
+      7.  \> References                      \\
+      A.  \> Appendix A  (not likely)        
+    \end{tabbing}
+  \end{spacing}
+\end{boxedminipage}\\
+\end{centering}
+In a major report it is customary to start every section (Results and Discussion,
+Conclusions and Recommendations, etc) on a new page, except if the sections are less than one page long.\bigskip
 
 In a paper every section is not necessarily started on a new page.
 Conserve space as much as possible.
 \end{table}
 
+\section{Formatting rules}
 \subsection{Font and spacing}
 A font that is large enough to remain legible after being reduced in
 size (for instance, when printing two pages per page) should be used.
@@ -398,14 +322,19 @@ When both are used together, the date comes first, leading to a set of numbers w
 Smaller numbers may be left off in each group, so 2010-04 (for April 2010) or 09:15 (for quarter past 9) are acceptable.
 
 \subsection{Figures}
-Figures are included in the text with no border, and a suitable center-justified caption is displayed below the figure as shown in Figure~\ref{fig:figexample}.
+Figures are included in the text with no border. 
+A suitable caption is shown below the figure.
+If the caption fits on one line, it should be center-justified.
+If it does not, it should be left or full justified with a hanging indent as shown in Figure~\ref{fig:figexample}.
+The figure label text (``Figure n'') is shown in bold.
+If the figure is from a reference text, the reference is repeated in the caption.
 
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}
     \begin{axis}[xlabel=Time (s), 
                  ylabel=Height (m), 
-                 ylabel style={rotate=-90, anchor=east},
+%                 ylabel style={rotate=-90, anchor=east},
                  domain=0:10,
                  ymin=0,ymax=110,
                  enlargelimits=false]
@@ -419,7 +348,7 @@ Figures are included in the text with no border, and a suitable center-justified
     \end{axis}
   \end{tikzpicture}
   \caption{Example of a figure.  Note that the line types are easy to
-    distinguish without a colour display.  }
+    distinguish without a colour display.  Include a citation in the caption if the figure is from referred source.}
   \label{fig:figexample}
 \end{figure}
 
@@ -432,29 +361,20 @@ Figures containing photographs should be processed to be legible in
 black and white, including labels.
 
 \subsubsection*{Dos and don'ts}
-Do
 \begin{itemize}
-\item Ensure that the fonts on your picture are the same size and type as
-  the main text.
-\item Use linetypes that are distinguishable in black and white
-  reproductions
-\item Use suitable axes for showing the information you need to be seen
-  (logarithmic for exponential behaviour, etc)
-\item Use suitable orders of fits if fitting.
-\item Show error bars indicating uncertainty.
-\item Include detail in the caption (about number of experiments,
-  variance)
-\item Use the caption to tell the reader what to look for in the graph/picture.
+\item Do ensure that the fonts in your picture are clearly legible
+\item Do use linetypes that are distinguishable in black and white reproductions
+\item Do use suitable axes for showing the information you need to be seen (logarithmic for exponential behaviour, etc)
+\item Do use suitable orders of fits if fitting.
+\item Do include detail in the caption (about number of experiments, variance)
+\item Do use the caption to tell the reader what to look for in the graph/picture.
 \end{itemize}
 
-Don't
 \begin{itemize}
-\item Fit splines (smooth curves) through all the data points
-\item Graph data that can fit into a small table (typically, use the
-  representation that takes less space).
-\item Use ``computerisms'' like degC instead of \si{\celsius}\ or 1.2e2
-  instead of \num{1.2e2} 
-\item Connect discrete experimental results with lines or connect data when there are not enough to suppose interpolation holds
+\item Don't fit splines (smooth curves) through all the data points 
+\item Don't data that can fit into a small table (typically, use the  representation that takes less space).
+\item Don't use ``computerisms'' like degC instead of \si{\celsius}\ or 1.2e2 instead of \num{1.2e2} 
+\item Don't connect discrete experimental results with lines or connect data when there are not enough to suppose interpolation holds
 \end{itemize}
 
 \subsection{Tables}
@@ -472,17 +392,20 @@ Table~\ref{tab:tabexample}.
   \begin{minipage}{0.5\textwidth}
     \begin{centering}
       \begin{tabular}{@{}llr@{}} \toprule 
-        \multicolumn{2}{c}{Item} \\ \cmidrule(r){1-2} 
-        Animal & Description & Price\textsuperscript{a} (R)\\ \midrule 
-        Gnat & per gram & \num{13.65} \\ 
-        & each & \num{0.01} \\ 
-        Parrot\textsuperscript{b} & stuffed & \num{92.50} \\ 
-        Emu & stuffed & \num{33.33} \\ 
-        Armadillo & frozen & \num{8.99} \\ \bottomrule 
-      \end{tabular} \\
+        \multicolumn{2}{c}{Item}                                               \\ 
+        \cmidrule(r){1-2} 
+        Animal                    & Description & Price\textsuperscript{a} (R) \\ 
+        \midrule 
+        Gnat                      & per gram    & \num{13.65}                  \\ 
+                                  & each        & \num{0.01}                   \\ 
+        Parrot\textsuperscript{b} & stuffed     & \num{92.50}                  \\ 
+        Emu                       & stuffed     & \num{33.33}                  \\ 
+        Armadillo                 & frozen      & \num{8.99}                   \\ 
+        \bottomrule 
+      \end{tabular}                                                            \\
     \end{centering} 
     \vspace{1em}
-    \textsuperscript{a} As of 2004 \\
+    \textsuperscript{a} As of 2004                                             \\
     \textsuperscript{b} Norwegian blue only
   \end{minipage}
 \end{table}
@@ -490,6 +413,7 @@ Table~\ref{tab:tabexample}.
 Units should be specified in the heading of a column and longer descriptions included as footnotes below the table.
 Never split a figure or a table across two pages.
 If more space is required than a single page, it is usually a sign that the material should be split into separate tables.
+Always use a reasonable number of significant digits in your table.
 
 \subsection{Cross-referencing}
 When referring to items in the same text, use capitals and the
@@ -506,8 +430,9 @@ Use ``Figure 1 and Figure 2'' instead of ``Figures 1 and 2''.
   detail, while Section~5 proposes novel research directions.
 \end{quote}
 
+\emph{Each and every sketch, figure and  table must be referred to in the text.} 
 Place figures and tables as close as possible to their first reference (but definitely after the first reference).  
-\emph{Each and every sketch, figure and  table must be referred to in the text.}
+
 
 \subsection{Abbreviations}
 \label{sec:abbreviations}
@@ -565,7 +490,7 @@ investigation. Many technical journals limit the title to 15 words.
 
 \subsubsection{Reports}
 Figure~\ref{fig:reportformatsummary} shows a summary of the information that
-will be found in a report.  Refer to Table~\ref{tab:reportformat}.
+will be found in a report.  Refer to Table~\ref{tab:format}.
 
 \begin{figure}[htbp]
   \centering
@@ -605,7 +530,7 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
       \centerline{\textbf{Title of Report}}
       \vspace{1em}
       \textbf{Synopsis}\\
-      {\small Scope \\ Main findings \\ Main conclusions \\ }
+      {\small Scope, main findings, main conclusions. \\ }
       Keywords: a, b, c
       \vfill
 %      \textbf{Sinopsis}\\
@@ -624,6 +549,10 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
         Synopsis\dotfill iii \\
         Nomenclature\dotfill v \\
         1. Introduction\dotfill 1}
+      \vfill
+      \begin{centering}
+        iv \\
+      \end{centering}
     \end{demopage}
     }
   \fbox{
@@ -642,11 +571,9 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
     }
   \fbox{
     \begin{demopage}
+      \raggedright
       \textbf{1. Introduction}\\
-      {\small Background \\ 
-        Problem statement \\
-        Purpose \\
-        Method, Scope \\
+      {\small Background, problem statement, purpose, method, scope \\
         (see~\ref{sec:introduction})
       }
       \vfill
@@ -665,33 +592,26 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
   \fbox{
     \begin{demopage}
       \textbf{3.~Experimental}\\
-      {\small Apparatus \\ Planning \\ Methods \\ (see~\ref{sec:experimental})}
+      {\small Apparatus, planning and methods \\ (see~\ref{sec:experimental})}
       \vfill
       \begin{centering}3\\ \end{centering}
     \end{demopage}
     }
   \fbox{
     \begin{demopage}
-      \textbf{4. Results}\\
+      \textbf{4. Results and Discussion}\\
       {\small \begin{raggedright} Supporting evidence, most important
           results first.  Use graphs and tables where
-          possible. (see~\ref{sec:results}) \\ \end{raggedright}}
+          possible. Explain the observed correlations
+          between variables. (see~\ref{sec:results-and-discussion}) \\ \end{raggedright}}
       \vfill
       \begin{centering}4\\ \end{centering}
     \end{demopage}
     }
   \fbox{
     \begin{demopage}
-      \textbf{5. Discussion}\\
-      {\small \begin{raggedright} Explain the observed correlations
-          between variables (see~\ref{sec:discussion}). Usually combined with results.
-          \\ \end{raggedright}} \vfill
-      \begin{centering}5\\ \end{centering}
-    \end{demopage}
-    }
-  \fbox{
-    \begin{demopage}
-      \textbf{6. Conclusions and Recommendations}\\
+      \raggedright
+      \textbf{5. Conclusions and Recommendations}\\
       {\small Main findings  \\ No new information  (see~\ref{sec:conclusions} and \ref{sec:recommendations})}
       \vfill
       \begin{centering}6\\ \end{centering}
@@ -699,8 +619,17 @@ will be found in a report.  Refer to Table~\ref{tab:reportformat}.
     }
   \fbox{
     \begin{demopage}
-      \textbf{7. References}\\
-      {\small \begin{raggedright} Complete list of references in text.  Not a reading list (see~\ref{sec:references}) \\ \end{raggedright}}
+      \raggedright
+      \textbf{6. References}\\
+      {\small Complete list of references in text.  Not a reading list (see~\ref{sec:references}) \\ }
+      \vfill
+      \begin{centering}8\\ \end{centering}
+    \end{demopage}
+    }
+  \fbox{
+    \begin{demopage}
+      \textbf{A. First Appendix}\\
+      {\small \begin{raggedright} Include only if necessary. Not a place to dump raw figures or calculations \\ \end{raggedright}}
       \vfill
       \begin{centering}8\\ \end{centering}
     \end{demopage}
@@ -775,16 +704,16 @@ that will be found in a paper.  Refer to Table~\ref{tab:paperformat}.
     \begin{demopage}
       \begin{centering}
         \vfill
-        \textbf{TITLE OF ARTICLE} \\
+        \textbf{Title of Article} \\
         \vfill
         {\small Student, A and Lecturer, B \\ Department of Chemical
           Engineering \\ University of Pretoria \\
         \vfill
-        \begin{centering} {\small SYNOPSIS} \\ \end{centering}
+        {\small Synopsis} \\
         \rule{0.9\textwidth}{2pt} \\
         \rule{0.9\textwidth}{2pt} \\
         \vfill
-        KEYWORDS: a, b, c
+        Keywords: a, b, c
         }
       \end{centering}\\
       \vfill
@@ -826,9 +755,9 @@ following:
 \item The title in capitals, centred and not underlined.
 \item Name/names of author(s), company affiliation(s) and address of
   the author to whom correspondence must be addressed.
-\item A heading ``SYNOPSIS'' centred, followed by the synopsis of 100 to
+\item A heading ``Synopsis'', followed by the synopsis of 100 to
   200 words.
-\item A heading ``KEYWORDS:'' at the left margin, followed (on the same
+\item A heading ``Keywords:'' at the left margin, followed (on the same
   line) by the keywords (generally no capitals).
 \end{itemize}
 
@@ -874,7 +803,7 @@ keywords are selected.
 Choose a maximum of five words to characterise the report, and choose them carefully.  
 Keywords should not be too general.
 
-eg KEYWORDS:   small letters, same line
+eg Keywords:   small letters, same line
 
 \subsection{Introduction}
 \label{sec:introduction}
@@ -953,7 +882,7 @@ equipment is used.  Do not present the apparatus as a ``shopping
 list'', use full sentences. Only if necessary will the suppliers of chemicals, etc, be mentioned.
 
 \paragraph{Planning}
-This is the experimental design .
+This is the experimental design.
 Name the independent variables and justify the choice.  Justify the
 range of values investigated for the independent variables used.  Show
 and justify the choice of dependent (or measured) variables.  Show the
@@ -977,16 +906,14 @@ Less detail will be given and referencing will be generous.
 
 \textbf{Try not to reference the full report on which the paper is based}.
 
-\subsection{Results}
-\label{sec:results}
+\subsection{Results and discussion}
+\label{sec:results-and-discussion}
 If it is immaterial to logic and flow of argument, report the most
 important results first.  Use graphical and tabular presentation
 judiciously, favouring graphical presentation.  Do not, in the same
 report, show the same data graphically and in tabular form.  Indicate
-important points to the reader.  It often makes more sense to report
-the results and immediately discuss their significance.  In such
-instances change the heading to ``Results and discussion''. The
-discussion chapter will then automatically disappear.
+important points to the reader.  
+Report the results and immediately discuss their significance.
 
 In reports, illustrate data manipulation using complete sample
 calculations.  If it is feasible (for example in laboratory reports)
@@ -995,17 +922,14 @@ separately in an appendix and referred to here.  In the case of large
 projects, make meaningful subdivisions so that results do not
 disappear in the variety of data, calculations etc.
 
-\emph{Note:} Generally it is a good idea to subdivide the results section.
-Sub-headings assist greatly in providing structure to a report or
-paper.
+\emph{Note:} Generally it is a good idea to subdivide the results and discussion section.
+Sub-headings assist greatly in providing structure to a report or paper.
 
 In papers, data manipulation and sample calculations are not generally
 shown.  It may at times be necessary to tell the reader (in principle)
 how the observed values were manipulated to arrive at the information
 presented.
 
-\subsection{Discussion}
-\label{sec:discussion}
 The results of most technical projects are in the form of correlations
 between different variables.  The correlations must be explained using
 accepted theories and mechanisms.  In the case of research projects,
@@ -1015,17 +939,13 @@ The discussion and interpretation of your results will lead to
 conclusions being drawn.  These conclusions should not merely be a
 summary of results or observations, but rather show how these results
 have been interpreted to form a new statement.
-All conclusions must be based on results.
+All conclusions must be based on results and reported in this section.
 
-From the viewpoint of the project leader's evaluation, this is a very
-important chapter.  It gives an indication of the author's insight
-into the problem.
-
-\subsection{Conclusions (findings)}
-\label{sec:conclusions}
-This chapter is a resum\'e of all the conclusions already drawn in the
-discussion chapter.  There will consequently be some repetition.  The
-most important conclusions must be mentioned first, unless this leads
+\subsection{Conclusions and Recommendation}
+\label{sec:conclusions-and-recommendations}
+This chapter is a summary of all the conclusions already drawn in the results and discussion chapter.
+There will consequently be some repetition.
+The most important conclusions must be mentioned first, unless this leads
 to bad logic or loss of argument.  No new material, information or
 conclusions may be introduced at this point.
 
@@ -1035,13 +955,9 @@ If this is not possible, the \subsectionname{Introduction} must be revised.
 All conclusions mentioned here, must have been discussed beforehand.  
 All conclusions must be based on results.
 
-\subsection{Recommendations}
-\label{sec:recommendations}
-
 Findings may lead to actions which should be considered.  The
 recommended actions are summarised as recommendations.  All
 recommendations must be justified or justifiable from the conclusions.
-The recommendations are frequently be combined with the conclusions in one chapter.
 
 \subsection{References}
 \label{sec:references}
@@ -1131,97 +1047,12 @@ in the appendix -- explain why they were included and clear up some of
 the more confusing aspects of the items.  An appendix is not a place
 to ``dump'' information of only peripheral interest to the reader.
 
+Appendices are letter-numbered starting at A. Refer to this document as an example.
+
 \subsubsection{Papers}
 Only in exceptional cases will a paper contain an appendix.  Such an
 appendix should preferably not be more than one page and will not
 necessarily start on a new page.
-
-\section{Writing technical reports and papers}
-\label{cha:writing-reports}
-
-\subsection{Preparation}
-Never simply start writing.  Disciplined preparation is
-essential~\citep{johnson}.
-
-\subsubsection{Analysis}
-
-Ask yourself certain questions and answer them as well as possible
-
-\begin{itemize}
-\item Exactly what information do I wish to convey in this report/paper?
-\item What is the most logical order in which I can present this
-  information?
-\item For which group of readers am I writing?
-\item What background information can I assume these readers already
-  possess?
-\end{itemize}
-
-\subsubsection{Planning}
-Plan a comprehensive scheme -- it will serve as your guide for writing.
-
-\begin{itemize}
-\item Make as many subdivisions as possible.
-\item Determine the hierarchy of headings.  Bear in mind that in any
-  scheme material will be separated into divisions and subdivisions
-  which, by definition, will be equal to or subordinate to one another
-\end{itemize}
-
-\subsection{Writing sequence}
-Although the title appears first and after that the synopsis,
-keywords, list of symbols, introduction etc, a report/paper is not
-written in this sequence.
-
-The \subsectionname{Introduction} is written first.  Give the background,
-problem statement, purpose of the investigation and scope of the
-investigation (See~Section~\ref{sec:introduction}).  After that the
-\subsectionname{Main body} of the report (See~Section~\ref{sec:literature} to
-Section~\ref{sec:discussion} and the \subsectionname{Appendices} (See
-section~\ref{sec:appendices}) are completed.
-
-The next important chapter is the \subsectionname{Conclusions and
-  recommendations}.  (See~Section~\ref{sec:conclusions} and
-Section~\ref{sec:recommendations}).  
-The conclusions are already drawn and justified in the main body of the report.
-Everything that is stated in the \subsectionname{Introduction} as an aim/purpose must be addressed in the conclusions.
-It is totally unacceptable to make unsubstantiated statements in this section.
-It is usually necessary to revise, refine or even rewrite the \subsectionname{Introduction} at this point.
-
-Now that the scope of the report is fixed and the conclusions are
-properly formulated, the \subsectionname{Synopsis} is written.  (See
-Section~\ref{sec:synopsis-keywords})
-
-The very last job to be done is the formulation of
-the \subsectionname{Title}.  Write down a few titles and choose the best
-one (See~Section~\ref{sec:title})
-
-\subsection{Editorial care}
-
-\subsubsection{Sentence and paragraph construction}
-The so-called fog index can be used to quantify the readability of a
-piece of prose.  It is based on sentence length and the use of
-multi-syllable words.  The longer the average length of the sentence,
-the less readable the report becomes.  Try to keep the average
-sentence length under 15 to 20 words.  Use simple explanatory
-sentences.  Where long sentences are required, ensure that these are
-not confusing.  Avoid vagueness, unnecessary words and words that do
-not say exactly what the author means.
-
-A paragraph consists of a number of sentences on a single topic or around a single theme.  
-This theme is usually identified early on in the paragraph.
-Avoid single-sentence paragraphs.
-
-\subsubsection{Hierarchy of headings}
-\label{sec:hierarchy-headings}
-The chapters are the most important divisions and are numbered with
-single digits.  Further divisions are done in decimal notation.  Make
-sure that the numbering reflects the importance of the heading.
-
-If it is elected not to number chapter and paragraph headings, the
-hierarchy must be clear from the letter type (capital, bold, lower
-case, etc).  Try not to underline headings.
-
-\subsubsection{Notation, graphics, etc}
-Study Appendix~\ref{app:computerproblems}.
 
 \section{Editing}
 \label{cha:editing}
@@ -1585,217 +1416,6 @@ necessary to renumber all the references.  It is also often easier for
 the reader if the referenced author is mentioned by name in the text,
 instead of being identified as a number only.
 
-\section{Computer specific problems}
-\label{app:computerproblems}
-\subsection{Computer notation}
-\label{sec:compnotation}
-
-As computers become more prevalent it is tempting to use notation that
-is useful on the computer in technical writing.  Make sure that you do
-not use one of the incorrect forms listed in Table~\ref{tab:compnotation}
-\begin{table}[htbp]
-  \caption{Common computer notation errors}
-  \label{tab:compnotation}
-  \begin{centering}
-    \begin{tabular}{lll}
-      \toprule
-      Incorrect & Improvement & Problem point \\
-      \midrule
-      1123.232e6 & \num{1123.123e6} & 1 \\
-      \verb|a*b^c/2| & $\frac{a \times b^c}{2}$ or $a\cdot b^c / 2$ &
-      2,3 \\
-      lambda*4 & $4\lambda$ & 2,4 \\
-      \bottomrule
-    \end{tabular}\\
-  \end{centering}
-\end{table}
-
-Do not use:
-\begin{enumerate}
-\item \verb|e| to denote scientific notation.  Rather use
-  \num{10.2e2}.
-\item \verb|a*b| for multiplication in an equation. Rather use
-$a \cdot b$, $a \times b $ or implied multiplication ($ab$).
-\item \verb|a^b| for exponentiation.  Rather use $a^b$.
-\item written out versions of Greek letters (like lambda).  Rather use
-  the correct character ($\lambda$).
-\end{enumerate}
-
-\subsection{Graphic file formats}
-When graphics are stored on a computer, there are two different
-approaches that can be taken.  We can store information about
-\begin{itemize}
-\item each pixel (picture element) in the image or
-\item the objects that make up the image (lines, arcs, blocks, etc).
-\end{itemize}
-
-An image described using the pixel approach is termed a \emph{raster}
-graphic, while images described using the second approach are called
-\emph{vector} graphics.
-
-The difference between raster and vector graphics can easily be seen
-when enlarging or zooming in on an image as shown in
-Figure~\ref{fig:rastervector}.
-
-\begin{figure}[htbp]
-  \centering
-  \begin{minipage}{0.4\linewidth}
-    \centering
-    \includegraphics[width=0.5cm]{rasdemo}    
-    \includegraphics[width=1cm]{rasdemo}
-    \includegraphics[width=2cm]{rasdemo}
-    \includegraphics[width=4cm]{rasdemo}\\
-    Raster
-  \end{minipage}
-  \begin{minipage}{0.4\linewidth}
-    \centering
-    \includegraphics[width=0.5cm]{vecdemo}
-    \includegraphics[width=1cm]{vecdemo}
-    \includegraphics[width=2cm]{vecdemo}
-    \includegraphics[width=4cm]{vecdemo}\\
-    Vector
-  \end{minipage}  
-  \caption{Difference between raster and vector graphics}
-  \label{fig:rastervector}
-\end{figure}
-
-Most of the graphics in an engineering report will be well represented
-using vector graphics.  They work well for plots, graphs and line
-drawings of equipment.  They result in small file sizes and produce
-high quality output when printed.  Examples of file extensions for
-vector files are EPS, WMF, EMF and Visio files.  Raster graphics will
-probably be used exclusively for photographs or screen captures of
-computer software.  Examples of file extensions for raster files are
-BMP, PNG, GIF, TIFF, and JPG.
-
-When preparing screen captures, another important aspect of the graphic
-file format is the type of compression used.  Most common raster file
-formats are \emph{lossless}, retaining all of the information in the
-original file.  The JPG file format, however, was designed to compress
-photographs and uses \emph{lossy} compression based on mathematical
-reduction of the information in the original file.  The effect of this
-compression can be seen in Figure~\ref{fig:jpgexample}, where a
-screenshot was taken and saved as a PNG file and a JPG file.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{screenshot_lossless}
-  \includegraphics[width=\textwidth]{screenshot_lossy}
-  \caption{Lossless compression (PNG) vs lossy compression (JPG).
-    Note the noise or ``artifacts'' in the second image}
-  \label{fig:jpgexample}
-\end{figure}
-
-The routines used to compress the image in JPG are optimised for photographs and should only be used for images with ``natural''
-characteristics, rather than computer generated images.
-
-Most students will incorporate graphics into a word-processor using ``copy and paste''.
-This may cause the format of the file to be unknown.
-It is recommended that all graphics be saved as separate files and then inserted into the document.
-This will not only ensure that the document retains a manageable size, but will make it easier to exchange graphics as well.
-
-\subsection{Equations}
-\label{sec:tips-equations}
-To insert an equation according to our guidelines in Word 2003 you can follow these steps:
-\begin{enumerate}
-\item Insert a 1$\times$3 table in Word, and make the column width of column 1 and 3 15\%.
-\item Next insert an equation in the middle column. Don't enter an equation.
-\item Place the cursor to the right of the equation in the middle column.
-\item Go to References | Insert Caption in the menu. Select ``Equation'' next to label and select the ``Exclude label from caption'' checkbox. See figure~\ref{fig:wordcaption}
-\item Move the caption to the third column and surround it in parentheses.
-\item Remove the borders from the table
-\item Select the whole table
-\item Save the equation to the gallery by selecting ``Insert|Equation|Save Selection to Equation Gallery.
-\end{enumerate}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{captionwindow}
-  \caption{The Insert Caption window in Word 2003}
-  \label{fig:wordcaption}
-\end{figure}
-Now you can insert this equation into a document using this building block.
-You can cross-reference this equation by going to ``References|Cross reference'' and selecting the ``Equation'' reference type. 
-You will see the window shown in figure~\ref{fig:wordcrossref}. 
-You can then select the equation from the list. 
-It will be kept up to date automatically.
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.7\textwidth]{crossreference}
-  \caption{The Cross-reference window in Word 2003}
-  \label{fig:wordcrossref}
-\end{figure}
-
-\subsection{Special characters}
-There are a number of special characters which are commonly mistyped or incorrectly entered.
-Never resort to using a different font like Symbol to enter your special symbols.
-Rather use the Unicode code point for the character you are looking for.
-Table~\ref{tab:specialchar} shows a number of common symbols.
-On MS Windows, these characters can be entered by holding the Alt key and then entering the code point including the leading zero.
-For example, to enter the multiplication sign, press and hold Alt while entering 00D7, then let go of the Alt key.
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{lcll}
-    \toprule
-    Name                                                                                                  & Symbol               & Code point & Name                \\ 
-    \midrule
-    Degree                                                                                                & \SI{}{\degree}       & U+00B0     & degree sign         \\ 
-    Multiplication                                                                                        & $\times$             & U+00D7     & multiplication sign \\
-    Chemical equilibrium                                                                                  & $\rightleftharpoons$ & U+021CC    & rightleftharpoons   \\
-    \AA ngstr\"om                                                                                         & \SI{}{\angstrom}     & U+212B     & angstrom sign       \\
-    Multiplication dot                                                                                    & $\cdot$              & U+22C5     & dot operator        \\
-    \bottomrule
-  \end{tabular}
-  \caption{Unicode code points for commonly used special characters}
-  \label{tab:specialchar}
-\end{table}
-%TODO: consider all the stuff in this table https://publications.csiro.au/rpr/download?pid=csiro:EP115755 & dsid=DS4
-
-\subsection{Formatting}
-\label{sec:tips-formatting}
-There are often problems with line breaks when certain words need to
-be kept together.  A common example is a number and its unit or the
-number \num{1.2e4}.  It is bad form for such elements to be broken at
-the end of a line.  The solution to this problem is the
-\emph{non-breaking space}.  In Microsoft Word, a non-breaking space is
-inserted by pressing Ctrl-Shift-Space.  In \LaTeX, use \verb|~|.
-
-% FIXME
-%\textbf{I need advice from Word users on correct ways of including figures, tables, references and cross-references}
-
-%\subsection{Figures and tables}
-
-%\subsection{References}
-
-%\subsection{Cross-references}
-
-%\section{Gallery}
-%\label{cha:gallery}
-%This chapter contains examples of good and bad practise.  Use it to
-%identify problems in your reports and find out how to fix them.
-
-%\section{Useful links}
-%The NIST Reference on Constants, Units, and Uncertainty \url{http://physics.nist.gov/cuu/}
-%
-
-% \section{Grammatical errors}
-% \label{app:grammatical-errors}
-
-% Some common grammatical errors should be avoided assiduously:
-
-% \begin{description}
-% \item[Split infinitives] The infinitive form of a verb is the
-%   structure ``to \emph{verb}''.  These two words should be seen as a
-%   unit and should not be split with adverbs as in ``to easily do''.
-%   Rather use ``to do easily''.  See
-%   \url{http://en.wikipedia.org/wiki/Split_infinitive}.
-% \item[Dangling participle] Ensure that modifiers (especially
-%   participles) attach clearly to the words they are modifying.  A
-%   common example of incorrect usage is ``Substituting Equation 1 into
-%   Equation 2 gives \dots''.  The following two examples are gramatically
-%   sound: ``Substitution of Equation 1 into Equation 2 gives \dots''
-%   and ``By substituting Equation 1 in Equation 2, we obtain \dots''.
-%   See~\url{http://en.wikipedia.org/wiki/Dangling_modifier}.
-% \end{description}
 
 \section{Font and Spacing}
 \label{sec:app-font-spacing}

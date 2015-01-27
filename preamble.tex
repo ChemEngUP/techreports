@@ -1,0 +1,68 @@
+% Use ISO date format
+\usepackage[english, iso]{isodate}
+
+% Make everything look a little better
+\usepackage{microtype}
+
+% Author, year refrencing
+\usepackage{natbib}
+
+\usepackage{fancybox}
+\usepackage{boxedminipage}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{color}
+
+% Proper table lines
+\usepackage{booktabs}
+% More space above tables for caption
+\setlength{\abovetopsep}{0.1em}
+
+% Change page size
+\usepackage[inner=0.4in, outer=0.3in, twoside, tmargin=0.3in, bmargin=0.5in]{geometry}
+
+% Change caption formatting
+\usepackage[hang, bf]{caption}
+
+% Unit typesetting
+\usepackage[locale=ZA]{siunitx}
+
+% plotting
+\usepackage{pgfplots}
+
+% import graphics
+\usepackage{graphicx}
+  \DeclareGraphicsExtensions{.jpg, .pdf, .mps, .png}
+  \graphicspath{{graph/}}
+
+% Put bibliography in table of contents, and change name to "References"
+\usepackage[nottoc,numbib]{tocbibind}
+\settocbibname{References}
+
+% Change punctuation for references
+\bibpunct[: ]{(}{)}{;}{a}{,}{,}
+
+% Change fonts?
+%\usepackage{helvet} % helvetica "arial"
+% \usepackage{mathptmx} % Times new roman
+% \usepackage{utopia} % Utopia
+
+% AIEEE: screw up spacing to make Grimsehl happy
+\setlength{\parindent}{0in}
+\setlength{\parskip}{2.5ex plus 3pt minus 2pt}
+
+% Proper links
+\usepackage{hyperref}
+
+% Special stypes for sections and emphasis
+\newcommand{\strongemph}[1]{\textbf{#1}}
+\newcommand{\subsectionname}[1]{\emph{#1}}
+
+% Commands for typesetting the demo pages
+\newlength{\demopageheight}
+\newlength{\demopagewidth}
+\setlength{\demopageheight}{12em}
+\setlength{\demopagewidth}{0.32\linewidth}
+\newenvironment{demopage}{\begin{minipage}[s][\demopageheight]{\demopagewidth}}{\end{minipage}}
