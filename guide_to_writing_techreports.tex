@@ -171,7 +171,7 @@ compared with the same
 & {\fontsize{4.3mm}{11pt}\usefont{T1}{ptm}{m}{n} M Times } 
 & {\fontsize{5mm}{11pt}\usefont{T1}{pcr}{m}{n} M Courier } 
 & {\fontsize{4.2mm}{11pt}\usefont{T1}{ppl}{m}{n} M Palatino } \\\
-textbullet~``x'' height 
+\textbullet~``x'' height 
 & {\fontsize{4mm}{5mm}\usefont{T1}{phv}{m}{n} x Arial}
 & {\fontsize{4.6mm}{5mm}\usefont{T1}{ptm}{m}{n} x Times} 
 & {\fontsize{4.6mm}{5mm}\usefont{T1}{pcr}{m}{n} x Courier} 
@@ -240,7 +240,7 @@ Notes:
 \item Standard mathematical functions ($\sin(\alpha)$, $\log b$) and
   numeric constants are not italicised.
 \item Numbered equations are centred, with the number in brackets on
-  right margin (see~Appendix~\ref{sec:tips-equations}).
+  right margin.
 \item A font similar to the body text font should be used, so when
   using a sans-serif font like Arial, the formulae should be
   sans-serif as well.
@@ -277,9 +277,7 @@ particularly in reversible reactions like
 \end{displaymath}
 
 \subsection{Numbers and units}
-Numbers are shown with a either a decimal comma \emph{or} a decimal point, spaces between thousands and
-$\times 10^x$ notation rather than computer notation
-(\num{12345.12345e-12}).  See~Appendix~\ref{app:computerproblems}.
+Numbers are shown with a either a decimal comma \emph{or} a decimal point, spaces between thousands and $\times 10^x$ notation rather than computer notation (\num{12345.12345e-12}).
 
 SI units should be favoured except where conversion would be
 uncomfortable (refer to a \SI{20}{psi} pressure limit rather than
@@ -292,8 +290,8 @@ For more information on the use of SI units see the BIPM website at \url{http://
 
 Units should always be upright to differentiate them from variables ($h = \SI{1}{\meter}$).  
 Always leave a space between a number and its
-unit, but ensure that the unit and the number are on the same line
-(see Appendix~\ref{sec:tips-formatting}).  Celsius temperature is
+unit, but ensure that the unit and the number are on the same line.  
+Celsius temperature is
 often incorrectly shown as 120\si{\celsius}, but should also be spaced
 as in \SI{2.4}{\celsius}.  The SI treats \% as a unit, so it should also be preceded by a space: \SI{2.1}{\%}.
 
@@ -355,7 +353,7 @@ If the figure is from a reference text, the reference is repeated in the caption
 Use similar fonts (both size and lettertype) in the figure as in the
 main text and always ensure that the caption explains the figure in
 more detail than ``A plot of height over time'' -- this is visible from the
-graph.  Note the advice in Appendix~\ref{app:computerproblems}.
+graph.
 
 Figures containing photographs should be processed to be legible in
 black and white, including labels.
@@ -538,7 +536,7 @@ will be found in a report.  Refer to Table~\ref{tab:format}.
 %      \rule{0.9\textwidth}{2pt} \\
 %      \vfill
       \begin{centering}
-        iii \\
+        ii \\
       \end{centering}
     \end{demopage}
   }
@@ -546,12 +544,12 @@ will be found in a report.  Refer to Table~\ref{tab:format}.
     \begin{demopage}
       \textbf{Contents}\\
       {\small 
-        Synopsis\dotfill iii \\
-        Nomenclature\dotfill v \\
+        Synopsis\dotfill ii \\
+        Nomenclature\dotfill iv \\
         1. Introduction\dotfill 1}
       \vfill
       \begin{centering}
-        iv \\
+        iii \\
       \end{centering}
     \end{demopage}
     }
@@ -566,7 +564,7 @@ will be found in a report.  Refer to Table~\ref{tab:format}.
         $\alpha$ Force coefficient \hfill{1} \\
         $\rho$ Density \hfill kg/m\textsuperscript{3}}
       \vfill
-      \begin{centering}v\\ \end{centering}
+      \begin{centering}iv\\ \end{centering}
     \end{demopage}
     }
   \fbox{
@@ -612,7 +610,7 @@ will be found in a report.  Refer to Table~\ref{tab:format}.
     \begin{demopage}
       \raggedright
       \textbf{5. Conclusions and Recommendations}\\
-      {\small Main findings  \\ No new information  (see~\ref{sec:conclusions} and \ref{sec:recommendations})}
+      {\small Main findings  \\ No new information  (see~\ref{sec:conclusions-and-recommendations})}
       \vfill
       \begin{centering}6\\ \end{centering}
     \end{demopage}
@@ -656,7 +654,7 @@ and the course name and code will be given.  In the case of formal
 academic dissertations and for some laboratory reports, the university
 prescribes the format of the title page.  The information is arranged
 intelligently to create a balanced impression.  The cover and title
-page are not numbered.
+page do not have visible numbering.
 
 The \subsectionname{synopsis} appears on the very next page, to enable
 the cursory reader to find out immediately what the main findings and
@@ -690,14 +688,14 @@ This list is generally only required if several equations are employed
 in the text.  The nomenclature list does not include abbreviations,
 acronyms, chemical formulae, etc.
 
-The pages on which the editorial information (synopsis, \dots nomenclature) appears are numbered with small roman numerals (i, ii, \dots).
+The pages on which the editorial information (synopsis, \dots nomenclature) appears are visibly numbered with small roman numerals (i, ii, \dots).
 These pages are also indicated in the table of contents.  The
 headings (synopsis, contents, nomenclature etc) of the editorial
 information are not numbered.
 
 \subsubsection{Papers (Journal Articles)}
 Figure~\ref{fig:paperformatsummary} shows a summary of information
-that will be found in a paper.  Refer to Table~\ref{tab:paperformat}.
+that will be found in a paper. Refer to Table~\ref{tab:format}.
 \begin{figure}[htbp]
   \centering
     \fbox{
@@ -1073,14 +1071,13 @@ See~Section~\ref{sec:introduction}.  Now read the
 aims/purpose as set in the introduction?  Are the most important
 conclusions offered first?  Is there a reason why not?  Are the
 conclusions clear and unambiguous?  See
-Section~\ref{sec:conclusions}.
+Section~\ref{sec:conclusions-and-recommendations}.
 
 The reader should now have a good idea of the success of the
 investigation.  Page through the report and look at the
 \strongemph{headings}.  Is the hierarchy of headings correct?  Do
 the numbers or letter type indicate the importance of the heading?  Is
-it clear that all the important aspects are included?  See
-Section~\ref{sec:hierarchy-headings}.
+it clear that all the important aspects are included?
 
 Now the \strongemph{report} is read in its entirety, starting at the
 introduction.  Note the content of each sentence and group of
@@ -1110,7 +1107,7 @@ Section~\ref{sec:experimental}.
 
 Are results properly arrived at and presented?  Are graphical
 presentations used efficiently?  Note the significance of data and the
-correctness of sample calculations.  See~Section~\ref{sec:results}.
+correctness of sample calculations.  See~Section~\ref{sec:results-and-discussion}.
 Gauge the author's insight from the discussion, the interpretation of
 the results and significance of relationships and correlations.  Is
 evaluation done using criteria that are identified in the literature?
