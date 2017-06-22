@@ -296,7 +296,7 @@ Remember to \emph{be consistent} when you have made an optional choice like usin
 Dates and times should conform to ISO standard 8601~\citep{isodates}.
 In summary, dates are written as YYYY-MM-DD (year, month, day) and times as hh:mm:ss (hours, minutes, seconds).  
 When both are used together, the date comes first, leading to a set of numbers where the significance of each group of digits is strictly descending.
-Smaller numbers may be left off in each group, so 2010-04 (for April 2010) or 09:15 (for quarter past 9) are acceptable.
+Smaller numbers may be left off in each group, so \the\year-04 (for April \the\year) or 09:15 (for quarter past 9) are acceptable.
 
 \subsection{Figures}
 Figures are included in the text with no border. 
@@ -480,7 +480,7 @@ will be found in a report.  Refer to Table~\ref{tab:format}.
       \end{centering}
       \vfill
       \begin{flushright}
-        \small CXX323 \\ 2010-05-10
+        \small CXX323 \\ \today
       \end{flushright}
     \end{demopage}
   }
@@ -496,7 +496,7 @@ will be found in a report.  Refer to Table~\ref{tab:format}.
         University of Pretoria }\\
         \vfill
         \begin{flushright}
-          \small CXX323 \\ 2010-05-10
+          \small CXX323 \\ \today
         \end{flushright}
       \end{centering}
     \end{demopage}
