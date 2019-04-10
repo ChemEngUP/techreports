@@ -761,13 +761,6 @@ FUNCTION {format.date}
     }
     'skip$
   if$
-  month "month" bibinfo.check duplicate$ empty$
-    'skip$
-    {
-      " " * swap$
-    }
-  if$
-  *
   extra.label *
   before.all 'output.state :=
   " (" swap$ * ")" *
