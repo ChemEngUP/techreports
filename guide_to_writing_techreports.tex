@@ -282,11 +282,11 @@ For more information on the use of SI units see the BIPM website at \url{http://
 Units should always be upright to differentiate them from variables ($h = \SI{1}{\meter}$).  
 Always leave a space between a number and its
 unit, but ensure that the unit and the number are on the same line.  
-Celsius temperature is
+Temperature is
 often incorrectly shown as 120\si{\celsius}, but should also be spaced
-as in \SI{2.4}{\celsius}.  The BIPM \href{https://www.bipm.org/en/publications/si-brochure/section5-3-7.html}{treats \% as a unit}, so it should also be preceded by a space: \SI{2.1}{\%}.
+as in \SI{120}{\celsius}. However, for angles, there is no space before the degree (90\si{\degree}). The BIPM \href{https://www.bipm.org/en/publications/si-brochure/section5-3-7.html}{treats \% as a unit}, so it should also be preceded by a space: \SI{2.1}{\%}. For ranges, use an en dash (30--\SI{50}{\celsius}); for intervals one may state the unit only once at the end (30, 40, and \SI{50}{\celsius}).
 
-To ensure that m (meter) is not confused with m (\num{1e-3} prefix) multiplication of units should always be indicated with a space or a raised center dot($\cdot$).
+To ensure that m (meter) is not confused with m (\num{1e-3} prefix), multiplication of units should always be indicated with a space or a raised center dot ($\cdot$).
 Note the difference between \SI{10}{ms^{-1}} (10 reciprocal milliseconds) and \SI{10}{m.s^{-1}} (10 meters per second).
 
 Another common error occurs with units like 
@@ -299,10 +299,9 @@ This should be written as \SI{4.2}{W/(m^2.K)} or
 but \emph{not} as \SI{4.2}{W/m^2K} or \SI{4.2}{W/m^2/K}.  
 Both of these last forms are ambiguous and can therefore lead to misunderstanding.
 
-Note that SI allows the use of l or L for litre, but not $\ell$.
-If there is a risk of confusing l (lower case ell) with 1 (one) or I (upper case i) in the font you are using, use L.
+For litre, only use L or mL to avoid the risk of confusing l (lower case ell) with 1 (one) or I (upper case i). Note that SI allows the use of l, but not $\ell$.
 
-Remember to \emph{be consistent} when you have made an optional choice like using L or using a dot instead of a space for multiplication.
+Remember to \emph{be consistent} when you have made an optional choice like using a dot instead of a space for multiplication.
 
 \subsection{Date and time}
 Dates and times should conform to ISO standard 8601~\citep{isodates}.
