@@ -17,7 +17,7 @@
     \vfil
     Guidelines and Rules for Writing Technical Reports and Papers\\}
   \vfil
-%  2019 \\
+  2020 \\
   \vfil
   \begin{flushright}\small{compiled on \today}\end{flushright}
 \end{centering}
@@ -166,8 +166,7 @@ Introduction. Experimental is often replaced by ``Materials and methods''.
 
 \section{Formatting rules}
 \subsection{Font and spacing}
-A font that is large enough to remain legible after being reduced in
-size (for instance, when printing two pages per page) should be used.
+A font that is large enough to remain legible when printing two pages per page should be used, typically 12~pt.
 
 % TODO: Fix this so that indenting the paragraphs as per LaTeX is allowed
 A line spacing of $1\frac{1}{2}$ (specified in the 
@@ -177,8 +176,7 @@ This spacing makes it easy to write comments on the report.
 
 \clearpage
 \subsection{Math}
-Mathematical symbols are treated as shown in the following example:
-% TODO: We should really have a reference for this style - maybe AMS?
+Mathematical symbols are typeset as shown in the following example \citep{ams}:
 
 The height $h$ was measured as a function of time $t$.  The relationship between $h$ and $t$ was found to be 
 \begin{equation}
@@ -204,7 +202,9 @@ Equation~\ref{eq:matexample}
 
 Therefore, the model was revised to
 \begin{equation}
-  \frac{\partial f}{\partial t} = 5t + g(t) \qquad \frac{\mathrm{d} g}{\mathrm{d} t} = t + f(t) \qquad A = \int_a^b f(t) \mathrm{d} t
+  \frac{\partial f}{\partial t} = 5t + g(t) \qquad 
+  \frac{\mathrm{d} g}{\mathrm{d} t} = t + f(t) \qquad 
+  A = \int_a^b f(t) \, \mathrm{d} t
 \end{equation}
 
 Finally, it was determined that
@@ -214,15 +214,14 @@ Finally, it was determined that
 
 Notes:
 \begin{itemize}
-\item Scalar variables ($h$, $t$, $s$) are \emph{italicised} lower case.
+\item Scalar variables ($h$, $t$, $s$) are \emph{italicised} lower case (this includes parameters).
 \item Vector variables ($\mathbf{v}$, $\mathbf{x}$) are \textbf{bold}
   lower case, but not italicised.
 \item Matrix variables ($G$) are upper case and \emph{italicised}.
   Matrices are shown in Equation~\ref{eq:matexample}, with
   square brackets.
 \item Standard mathematical functions ($\sin(\alpha)$, $\log b$), operators (d,
-  $+$, $-$) and
-  numeric constants (\num{123.4}) are not italicised.
+  $+$, $-$), numeric constants (\num{123.4}), and dimensionless numbers (Re, Nu) are set in roman type (not italicised).
 \item Numbered equations are centred, with the number in parentheses on
   right margin.
 \item A font similar to the body text font should be used, so when
@@ -230,16 +229,15 @@ Notes:
   sans-serif as well.
 \item Differential equations are stated using the correct partial
   derivative symbol $\partial$ (not a lowercase delta $\delta$) for
-  partial derivatives and upright ``d''s  for total derivatives.
-\item Integrals are stated using upright ``d''s
+  partial derivatives and upright ``d''s  for total derivatives. Integrals are also stated using upright ``d''s.
 \item Deeply nested equations can use braces, brackets, and parentheses in the
   sequence \{[()]\}.
 \item An equation can be seen as a clause and should scan as a part of
   the sentence.  However, associated punctuation should be implied
   rather than expressed.  In Equation~\ref{eq:commaexample}, there is
   an implied comma after the equation, while in
-  Equation~\ref{eq:matexample} there is an implied period.
-\item Note the difference between the mathematical operators for subtraction $-$ and multiplication $\times$ and the en dash - and the letter x. 
+  Equation~\ref{eq:matexample} there is an implied period. However, if a citation precedes an equation, a colon may be used.
+\item Note the difference between the mathematical operators for subtraction $-$ and multiplication $\times$, and the en dash -- and the letter x. 
 \end{itemize}
 
 \subsection{Chemistry}
