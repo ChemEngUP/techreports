@@ -310,10 +310,12 @@ When both are used together, the date comes first, leading to a set of numbers w
 Smaller numbers may be left off in each group, so \the\year-04 (for April \the\year) or 09:15 (for quarter past 9) are acceptable.
 
 \subsection{Figures}
-Figures are included in the text with no border. 
-A suitable caption is shown below the figure.
-If the caption fits on one line, it should be center-justified.
-If it does not, it should be left or full justified with a hanging indent as shown in Figure~\ref{fig:figexample}.
+Figures are centred in the text with no border around it. Use similar fonts (both size and typeface) in the figure as in the main text. Figures containing photographs should be processed to be legible in black and white, including labels and the legend. Box the legend to distinguish its markers from the chart, unless it is very large, in which case the legend is placed next to the chart area.
+
+A caption is shown below the figure and always ensure that it explains the figure in more detail than ``A plot of height over time''---this is visible from the graph.
+If the caption fits on one line, it should be centre-justified.
+If it does not, it should be left or full justified with a hanging indent as shown in Figure~\ref{fig:figexample}. If the caption is a sentence fragment, no period is used. But if any complete sentence occurs in a caption, then all sentences, and any sentence fragments, in that caption should end with a period.
+
 The figure label text (``Figure n'') is shown in bold.
 If the figure is from a reference text, the reference is repeated in the caption.
 
@@ -340,28 +342,22 @@ If the figure is from a reference text, the reference is repeated in the caption
   \label{fig:figexample}
 \end{figure}
 
-Use similar fonts (both size and lettertype) in the figure as in the
-main text and always ensure that the caption explains the figure in
-more detail than ``A plot of height over time''---this is visible from the
-graph.
 
-Figures containing photographs should be processed to be legible in
-black and white, including labels.
 
 \subsubsection*{Dos and don'ts}
 \begin{itemize}
-\item Do ensure that the fonts in your picture are clearly legible
-\item Do use linetypes that are distinguishable in black and white reproductions
-\item Do use suitable axes for showing the information you need to be seen (logarithmic for exponential behaviour, etc)
+\item Do ensure that the fonts in your picture are clearly legible.
+\item Do use linetypes that are distinguishable in black and white reproductions.
+\item Do use suitable axes for showing the information you need to be seen (logarithmic for exponential behaviour, \textit{etc}.).
 \item Do use suitable orders of fits if fitting.
-\item Do include detail in the caption (about number of experiments, variance)
+\item Do include detail in the caption (about number of experiments, variance).
 \item Do use the caption to tell the reader what to look for in the graph/picture.
 \end{itemize}
 
 \begin{itemize}
-\item Don't fit splines (smooth curves) through all the data points 
-\item Don't use ``computerisms'' like degC instead of \si{\celsius}\ or 1.2e2 instead of \num{1.2e2} 
-\item Don't connect discrete experimental results with lines or connect data when there are not enough to suppose interpolation holds
+\item Don't fit a spline (smooth curve) through the data points (this indicates an exact solution or analytical model). 
+\item Don't use ``computerisms'' like degC instead of \si{\celsius}\ or 1.2e2 instead of \num{1.2e2}.
+\item Don't connect discrete experimental results with lines or connect data when there are not enough to suppose interpolation holds.
 \end{itemize}
 
 \subsection{Tables}
